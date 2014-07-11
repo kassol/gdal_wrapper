@@ -4,6 +4,9 @@
 #define _AFXDLL
 #include <afx.h>
 
+#include "gdal_priv.h"
+#pragma comment(lib, "gdal_dhj_win64_i.lib")
+
 #ifdef  GDAL_WRAPPER_EXPORT
 #define GDAL_WRAPPER_API __declspec(dllexport)
 #else
