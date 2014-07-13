@@ -13,6 +13,31 @@
 #define GDAL_WRAPPER_API __declspec(dllimport)
 #endif
 
+
+enum OpenFlags
+{
+	modeRead = 0,
+	modeWrite = 0x1,
+	modeReadWrite = 0x2,
+	modeJpegCompress = 0x4,
+	modePyramidCreate = 0x100,
+	modePyramidClean = 0x200,
+	modeAqlut = 0x400,
+	modeEnhance = 0xc,
+	modePyramidRead = 0x800,
+	shareCompat = 0,
+	shareExclusive = 0x10,
+	shareDenyWrite = 0x20,
+	shareDenyRead = 0x30,
+	shareDenyNone = 0x40,
+	modeNoInherit = 0x80,
+	modeCreate = 0x1000,
+	modeNoTruncate = 0x2000,
+	modePropertyOnly = 0x4000,
+	modeDemHeaderOnly = 0x8000
+};
+
+
 class GDAL_WRAPPER_API ImageDriver
 {
 public:

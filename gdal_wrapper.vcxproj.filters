@@ -18,9 +18,15 @@
     <ClInclude Include="gdal_wrapper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TiffDriver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="gdal_wrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TiffDriver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

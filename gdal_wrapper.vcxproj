@@ -138,9 +138,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="gdal_wrapper.h" />
+    <ClInclude Include="TiffDriver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="gdal_wrapper.cpp" />
+    <ClCompile Include="TiffDriver.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
