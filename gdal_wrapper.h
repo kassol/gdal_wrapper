@@ -44,4 +44,28 @@ public:
 };
 
 
+class GDAL_WRAPPER_API FmDem
+{
+	FmDem();
+	~FmDem();
+	HRESULT IsSupported(BSTR bstrPathName, UINT accMode);
+	HRESULT Open(BSTR bstrPathName, DOUBLE lfAltitudeOffset, UINT accMode);
+	HRESULT Close();
+	HRESULT GetAverageAltitude(double* pZ);
+	HRESULT GetAltitude(double X, double Y, double* pZ, UINT uResampleMethod);
+	HRESULT GetRows(int* pRows);
+	HRESULT GetCols(int* pCols);
+	HRESULT GetStartPos(double* pX0, double* pY0);
+	HRESULT GetCellSize(double* pXCellSize, double* pYCellSize);
+	HRESULT GetRange(double* pLBX, double* pLBY, double* pRTX, double* pRTY);
+private:
+	double* pAltitude;
+	double m_X0,m_Y0,m_XCellSize,m_YCellSize,m_Kappa;
+	int m_nRows,m_nCols;
+	double m_AveAltitude,m_MaxAltitude,m_MinAltitude;
+	double m_lfAltitudeOffset;
+	CString m_strDEMPathName;
+};
+
+
 #endif

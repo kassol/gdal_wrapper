@@ -45,4 +45,9 @@ enum BandFormat
 	BSQ
 };
 
+enum Altitude
+{
+	INVALID_ALTITUDE = -99999
+};
+
 #endif
