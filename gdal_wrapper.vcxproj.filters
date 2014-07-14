@@ -18,7 +18,16 @@
     <ClInclude Include="gdal_wrapper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TiffDriver.h">
+    <ClInclude Include="FmTiff.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FmBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FmJPEG.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -26,7 +35,13 @@
     <ClCompile Include="gdal_wrapper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TiffDriver.cpp">
+    <ClCompile Include="FmTiff.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FmBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FmJPEG.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

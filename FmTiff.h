@@ -1,12 +1,19 @@
 #pragma once
-#include "gdal_wrapper.h"
 
-class TiffDriver :
-	public ImageDriver
+#ifdef  GDAL_WRAPPER_EXPORT
+#define GDAL_WRAPPER_API __declspec(dllexport)
+#else
+#define GDAL_WRAPPER_API __declspec(dllimport)
+#endif
+
+#include "FmBase.h"
+
+class FmTiff :
+	public FmBase
 {
 public:
-	TiffDriver();
-	~TiffDriver();
+	FmTiff();
+	~FmTiff();
 
 	HRESULT Open(BSTR bstrPathPathName, UINT uMode);
 	HRESULT CreateImg(BSTR bstrFilePath, UINT uMode, int Cols, int Rows, UINT DataType, int nBandNum, UINT BandType, DOUBLE xStart, DOUBLE yStart, DOUBLE cellSize);
